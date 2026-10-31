@@ -95,7 +95,7 @@ Here the agent ran two weather lookups **in parallel** (they don't depend on eac
 - [x] Python for agents: tools, Pydantic, web APIs
 - [x] LLM tool calling with Gemini
 - [x] Agent loop from scratch (ReAct) with memory
-- [ ] Reflection and plan-and-execute patterns
+- [x] Reflection and plan-and-execute patterns
 - [ ] LangGraph and Google ADK
 - [ ] Agentic RAG and long-term memory
 - [ ] Agent protocols: MCP and A2A
