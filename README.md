@@ -56,7 +56,9 @@ Here the agent ran two weather lookups **in parallel** (they don't depend on eac
 | `first_tool_call.py` | The model choosing a tool and its arguments (without running it) |
 | `tool_round_trip.py` | One full cycle: model → tool → result → final answer |
 | `agent.py` | The complete agent: ReAct loop, error handling, memory and trimming |
-
+| `reflect_agent.py` | Reflection: a critic reviews each draft against the tool results |
+| `test_critic.py` | Testing the critic with deliberately wrong drafts |
+| `plan_agent.py` | Plan-and-execute: structured-output planner, step execution, tool-free final answer |
 ---
 
 ## Run it yourself
