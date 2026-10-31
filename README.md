@@ -59,6 +59,7 @@ Here the agent ran two weather lookups **in parallel** (they don't depend on eac
 | `reflect_agent.py` | Reflection: a critic reviews each draft against the tool results |
 | `test_critic.py` | Testing the critic with deliberately wrong drafts |
 | `plan_agent.py` | Plan-and-execute: structured-output planner, step execution, tool-free final answer |
+| `langgraph_agent.py` | The same agent rebuilt as a LangGraph graph: state, nodes, conditional edges, ToolNode |
 ---
 
 ## Run it yourself
