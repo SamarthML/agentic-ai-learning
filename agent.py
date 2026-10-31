@@ -37,7 +37,7 @@ TRIM_NOTE = ("(Note: earlier parts of this conversation were removed to save spa
              "If asked about them, say you no longer have that information.)")
 
 
-def trim_history(history: list, max_turns: int = 3) -> None:
+def trim_history(history: list, max_turns: int = 10) -> None:
     """Keep only the last `max_turns` questions and everything after them."""
     starts = [i for i, msg in enumerate(history)
               if msg.role == "user" and msg.parts[0].text]
@@ -52,7 +52,7 @@ def trim_history(history: list, max_turns: int = 3) -> None:
 def run_agent(question: str, history: list, max_steps: int = 5) -> str:   # NEW: history parameter
     # NEW: add the question to the SHARED history instead of making a new list
     history.append(types.Content(role="user", parts=[types.Part(text=question)]))
-    trim_history(history, max_turns=3)
+    trim_history(history, max_turns=10)
     for step in range(1, max_steps + 1):
         # THINK: the model decides what to do next
         try:   # NEW: a failed model call no longer crashes the program
