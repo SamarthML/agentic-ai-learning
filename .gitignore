@@ -4,3 +4,4 @@ __pycache__/
 .vscode/
 .adk/
 kb_index.json
+memory.db
